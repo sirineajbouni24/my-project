@@ -12,52 +12,33 @@
 </head>
 <body>
     <header>
-        
-        <h1> <img src="_logo.c6956743.png" alt="Barbie Store Logo" class="logo">
-            Barbie Store 
-        </h1>
-
         <nav>
-            <ul>
+            <div class="logo-container">
+                <img src="_logo.c6956743.png" alt="Barbie Store Logo" class="logo">
+                <h1>Barbie Store</h1>
+            </div>
+            
+            <ul class="nav-links">
                 <li><a href="home.html">Home</a></li>
                 <li><a href="products.html">Products</a></li>
                 <li><a href="Login.html">Login</a></li>
                 <li><a href="contact.html">Contact</a></li>
                 <li><a href="cart.html">Cart</a></li>
-
-
-
-                <li class="login-link">
-                    <a href="#" id="loginLink">Login</a>
-                    <div class="login-form"  id="loginForm">
-                        <input type="text" placeholder="Username" id="username">
-                        <input type="password" placeholder="Password" id="password">
-                        <button onclick="login()">Log In</button>
-                    </div>
-                </li>
-                
-
-
             </ul>
         </nav>
     </header>
 
-    <main>
-        
-        <div class="image-container">
-            <img  src="annonce.png"alt ="Barbie Store Photo">
-            <div class="image-description-box">
-            <p class="image-description">WORLD OF BARBIE !
-                Discover, explore, and revel in the iconic lifestyle of Barbie through a wide pink collection.</p>
-                 
-        </div>
 
-        <section class="about-section">
-            <h2>About us</h2>
-            <p>Welcome to Barbie Store, your destination for all things Barbie! Our passion for Barbie dolls drives us to curate a collection that celebrates creativity, imagination, and style.</p>
-            <p>With decades of experience, our team of collectors and enthusiasts handpick each doll, ensuring that you experience the magic that Barbie brings to our lives. Our dedication to quality and authenticity sets us apart.</p>
-            <p>Join us in celebrating the iconic journey of Barbie through time, and let the enchantment of our store inspire you to create your own stories with Barbie.</p>
+    <main>
+       <center> <section class="login-section">
+            <h2>Login</h2>
+            <form class="login-form" id="loginForm">
+                <input type="text" id="username" placeholder="Username">
+                <input type="password" id="password" placeholder="Password">
+                <button type="button" onclick="login()">Login</button>
+            </form>
         </section>
+    </center>
     </main>
 
     <footer>

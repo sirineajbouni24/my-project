@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function() {
         loginForm.style.display = "block";
     });
 });
-
+/*
 function login() {
     var username = document.getElementById("username").value;
     var password = document.getElementById("password").value;
@@ -20,7 +20,7 @@ function login() {
         alert("Login failed. Please check your credentials.");
     }
 }
-
+*/
 var cart = [];
 
 document.addEventListener("DOMContentLoaded", function() {
@@ -45,3 +45,19 @@ function updateCartItems() {
         cartItems.appendChild(listItem);
     });
 }
+
+function login() {
+    var username = document.getElementById("username").value;
+    var password = document.getElementById("password").value;
+
+    
+    if (username === "" || password === "") {
+        alert("Please fill in both username and password.");
+    } else {
+        
+        alert("Login successful!");
+
+        
+    }
+}
+

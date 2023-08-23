@@ -8,15 +8,17 @@
 <body>
     <header>
         <nav>
-            <ul>
+            <div class="logo-container">
+                <img src="_logo.c6956743.png" alt="Barbie Store Logo" class="logo">
+                <h1>Barbie Store</h1>
+            </div>
+            
+            <ul class="nav-links">
                 <li><a href="home.html">Home</a></li>
                 <li><a href="products.html">Products</a></li>
                 <li><a href="Login.html">Login</a></li>
                 <li><a href="contact.html">Contact</a></li>
                 <li><a href="cart.html">Cart</a></li>
-                <li class="cart-link">
-                    
-                </li>
             </ul>
         </nav>
     </header>
@@ -26,9 +28,10 @@
         <section class="cart-section">
             <h2>Your Cart</h2>
             <ul class="cart-items" id="cartItems">
-                <!-- Cart items will be dynamically added here -->
+                
             </ul>
-            <button class="checkout-button" onclick="checkout()">Proceed to Checkout</button>
+            <button class="checkout-button" onclick="calculateTotalAndCheckout()">Proceed to Checkout</button>
+
         </section>
     </main>
 
@@ -36,6 +39,6 @@
         <p>&copy; 2023 Barbie Store . All rights reserved.</p>
     </footer>
 
-    <script src="script1.js"></script>
+  <script src="new.js"></script>
 </body>
 </html>
