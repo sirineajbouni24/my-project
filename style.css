@@ -1,18 +1,21 @@
 body {
-    margin: 0; 
-    padding: 0; 
+    margin:0;
+    padding: 0;
     font-family: Arial, sans-serif;
     background-color: white;
-}
+    min-height: 100vh;
+    
+    }
 
 .logo {
-    max-height: 100px; /* Set the maximum height of the logo */
-    margin-right: 0rem; /* Add some spacing between the logo and title */
-    vertical-align: middle; /* Align the logo vertically with the text */
+    max-height: 100px;
+    margin-right: 0rem;
+    vertical-align: middle;
 }
+
 header {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     color: #bb1570;
     text-align: center;
@@ -24,64 +27,63 @@ h1 {
     font-size: 2rem;
     margin: 0;
     padding: 0;
-}
-
-h1 {
     text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5);
 }
-nav ul {
+
+.nav-links {
     list-style: none;
     display: flex;
-    align-items: center;
+    align-items: flex-end;
 }
+
 nav ul li {
     margin: 0 1rem;
 }
+
 nav ul li a {
     text-decoration: none;
     color: #dc7ed1;
     font-weight: bold;
     transition: color 0.3s ease;
 }
+
 nav ul li a:hover {
     color: #d2139c;
 }
+
 nav ul li a.active {
     color: #f8f8f8;
     border-bottom: 2px solid #f8f8f8;
 }
+
 nav ul li:not(:last-child)::after {
     content: "|";
     margin-left: 1rem;
     color: #c724ac;
 }
+
 main {
     padding: 2rem;
     text-align: center;
-}
-
-.brand-description {
-    margin-bottom: 1rem;
-    color: #555;
+    flex: 1;
 }
 
 footer {
     text-align: center;
-    padding: 1rem;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    
+    width: 100%;
+    
+    
     background-color: #f04e72;
     color: #fff;
-    bottom:0;
+    
 }
-
-footer a:hover {
-    color: #f8f8f8;
-    text-decoration: underline;
-}
-
-
 
 .image-container {
-    position: relative; /* Set the container as a positioning context */
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
@@ -89,29 +91,27 @@ footer a:hover {
     overflow: hidden;
 }
 
-/* Style the image */
 .image-container img {
     width: 100%;
     height: auto;
 }
 
-/* Style the pink description box */
 .image-description-box {
-    background-color: #f04e72; /* Pink background color */
+    background-color: #f04e72;
     padding: 1rem;
-    position: absolute; /* Position the description box absolutely */
-    bottom: 0; /* Position at the bottom of the container */
-    left: 0; /* Align to the left edge of the container */
-    width: 100%; /* Stretch the box to the full width */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
 }
 
-/* Style the image description */
 .image-description {
-    margin: 0; /* Remove default margin */
-    color: #fff; /* White text color */
+    margin: 0;
+    color: #fff;
     font-size: 1.1rem;
     text-align: center;
 }
+
 .about-section {
     margin: 2rem auto;
     max-width: 100%;
@@ -120,11 +120,13 @@ footer a:hover {
     border-radius: 10px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
+
 .about-section h2 {
     font-size: 2rem;
     margin-bottom: 1rem;
     color: white;
 }
+
 .about-section p {
     font-size: 1.1rem;
     line-height: 1.6;
@@ -132,35 +134,28 @@ footer a:hover {
     color: white;
 }
 
-.select-list:hover{
-cursor: pointer;
+.select-list:hover {
+    cursor: pointer;
 }
-
-
 
 .product {
     text-align: center;
     margin-bottom: 2rem;
 }
 
-
 .product img {
     max-width: 50%;
     height: auto;
 }
 
-
 .product h3 {
     margin: 10px 0;
 }
-
 
 .product-price {
     font-weight: bold;
     color: #f04e72;
 }
-
-
 
 .add-to-cart {
     background-color: #f04e72;
@@ -175,25 +170,34 @@ cursor: pointer;
     background-color: #d43f5d;
 }
 
+.login-section {
+    text-align: center;
+    margin: 2rem auto;
+}
+
 .login-form {
-    display: none;
-    position: absolute;
-    background-color: #fff;
-    border: 1px solid #ccc;
-    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    background-color: #f9f9f9;
+    border-radius: 5px;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-/* Style the login form inputs */
-.login-form input {
-    display: block;
+.login-form h2 {
     margin-bottom: 10px;
-    width: 100%;
-    padding: 8px;
-    border: 1px solid #ccc;
+    color: #f04e72;
 }
 
-/* Style the login form button */
+.login-form input {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
 .login-form button {
     background-color: #f04e72;
     color: #fff;
@@ -207,7 +211,7 @@ cursor: pointer;
     background-color: #d43f5d;
 }
 
-.add-to-cart {
+.checkout-button{
     background-color: #f04e72;
     color: #fff;
     border: none;
@@ -216,28 +220,7 @@ cursor: pointer;
     transition: background-color 0.3s;
 }
 
-.add-to-cart:hover {
-    background-color: #d43f5d;
-.cart-section {
-    text-align: center;
-    margin: 20px;
-}
-}
-/* Style the cart items list */
-.cart-items {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-/* Style the cart items */
-.cart-items li {
-    padding: 8px 0;
-    border-bottom: 1px solid #ccc;
-}
-
-/* Style the checkout button */
-.checkout-button {
+.sub-but{
     background-color: #f04e72;
     color: #fff;
     border: none;
@@ -246,45 +229,26 @@ cursor: pointer;
     transition: background-color 0.3s;
 }
 
-.checkout-button:hover {
-    background-color: #d43f5d;
-}
 
 .subscribe-form {
-    text-align: center;
-    margin: 20px;
-    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
     background-color: #f9f9f9;
     border-radius: 5px;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-/* Style the form title */
-.subscribe-form h3 {
+.subscribe-form h2 {
     margin-bottom: 10px;
     color: #f04e72;
 }
 
-/* Style the form input */
 .subscribe-form input {
     width: 100%;
     padding: 8px;
-    margin-bottom: 10px;
+    margin: 5px 0;
     border: 1px solid #ccc;
     border-radius: 3px;
 }
-
-/* Style the form button */
-.subscribe-form button {
-    background-color: #f04e72;
-    color: #fff;
-    border: none;
-    padding: 8px 16px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.subscribe-form button:hover {
-    background-color: #d43f5d;
-}
-
